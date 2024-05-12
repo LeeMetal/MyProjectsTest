@@ -12,12 +12,56 @@ now click in (Actions) find and click in the flow name in this
 case is (FirstFlow) and click in (Run workflow -> Run workflow)
 
 name: FirstFlow # Flow name
+# the line below allow workflow only run manually
 on:
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo Hello world!
+
+  deploy-develop:
+    runs-on: ubuntu-latest
+    environment:
+      name: develop
+      url: "urltest.com"
+    needs: build
+    steps:
+      - name: Run a one-line script
+        run: echo Deploy dev!
+
+  deploy-homologacao:
+    runs-on: ubuntu-latest
+    environment:
+      name: homologacao
+      url: "urltest.com"
+    needs: deploy-develop #This mean the homolog depend of the buid develop success to build homolog 
+    steps:
+      - name: Run a one-line script
+        run: echo Deploy homolog!
+
+  deploy-main:
+    runs-on: ubuntu-latest
+    environment:
+      name: Main
+      url: "urltest.com"
+    needs: deploy-homologacao #This mean the homolog depend of the buid develop success to build homolog 
+    steps:
+      - name: Run a one-line script
+        run: echo Deploy homolog!
+
+#Build after a push
+name: FirstFlow # Flow name
+on:
+  pull_request: #allow build after a push
+    types:[labeled]
+
+jobs:
+  build:
+    runs-on: self-hosted
     steps:
       - name: Run a one-line script
         run: echo Hello world!
