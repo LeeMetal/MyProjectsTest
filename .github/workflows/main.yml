@@ -1,0 +1,40 @@
+name: FirstFlow
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo Hello world!
+
+  deploy-develop:
+    runs-on: ubuntu-latest
+    environment:
+      name: develop
+      url: "urltest.com"
+    needs: build
+    steps:
+      - name: Run a one-line script
+        run: echo Deploy dev!
+
+  deploy-homologacao:
+    runs-on: ubuntu-latest
+    environment:
+      name: homologacao
+      url: "urltest.com"
+    needs: deploy-develop #This mean the homolog depend of the buid develop success to build homolog 
+    steps:
+      - name: Run a one-line script
+        run: echo Deploy homolog!
+
+  deploy-main:
+    runs-on: ubuntu-latest
+    environment:
+      name: Main
+      url: "urltest.com"
+    needs: deploy-homologacao #This mean the homolog depend of the buid develop success to build homolog 
+    steps:
+      - name: Run a one-line script
+        run: echo Deploy homolog!
