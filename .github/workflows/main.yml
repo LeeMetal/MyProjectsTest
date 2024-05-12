@@ -17,7 +17,7 @@ jobs:
     needs: build
     steps:
       - name: Run a one-line script
-        run: exho Deploy dev!
+        run: echo Deploy dev!
 
   deploy-homologacao:
     runs-on: ubuntu-latest
@@ -27,7 +27,7 @@ jobs:
     needs: deploy-develop #This mean the homolog depend of the buid develop success to build homolog 
     steps:
       - name: Run a one-line script
-        run: exho Deploy homolog!
+        run: echo Deploy homolog!
 
   deploy-main:
     runs-on: ubuntu-latest
@@ -37,4 +37,4 @@ jobs:
     needs: deploy-homologacao #This mean the homolog depend of the buid develop success to build homolog 
     steps:
       - name: Run a one-line script
-        run: exho Deploy homolog!
+        run: echo Deploy homolog!
