@@ -32,7 +32,7 @@ jobs:
   deploy-main:
     runs-on: ubuntu-latest
     environment:
-      name: main
+      name: Main
       url: "urltest.com"
     needs: deploy-homologacao #This mean the homolog depend of the buid develop success to build homolog 
     steps:
