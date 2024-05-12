@@ -1,0 +1,15 @@
+C:\Users\isabe\OneDrive\Área de Trabalho\Git\MyProjectsTest\firstproject\bin\Debug\net6.0\firstproject.exe
+C:\Users\isabe\OneDrive\Área de Trabalho\Git\MyProjectsTest\firstproject\bin\Debug\net6.0\firstproject.deps.json
+C:\Users\isabe\OneDrive\Área de Trabalho\Git\MyProjectsTest\firstproject\bin\Debug\net6.0\firstproject.runtimeconfig.json
+C:\Users\isabe\OneDrive\Área de Trabalho\Git\MyProjectsTest\firstproject\bin\Debug\net6.0\firstproject.dll
+C:\Users\isabe\OneDrive\Área de Trabalho\Git\MyProjectsTest\firstproject\bin\Debug\net6.0\firstproject.pdb
+C:\Users\isabe\OneDrive\Área de Trabalho\Git\MyProjectsTest\firstproject\obj\Debug\net6.0\firstproject.csproj.AssemblyReference.cache
+C:\Users\isabe\OneDrive\Área de Trabalho\Git\MyProjectsTest\firstproject\obj\Debug\net6.0\firstproject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\isabe\OneDrive\Área de Trabalho\Git\MyProjectsTest\firstproject\obj\Debug\net6.0\firstproject.AssemblyInfoInputs.cache
+C:\Users\isabe\OneDrive\Área de Trabalho\Git\MyProjectsTest\firstproject\obj\Debug\net6.0\firstproject.AssemblyInfo.cs
+C:\Users\isabe\OneDrive\Área de Trabalho\Git\MyProjectsTest\firstproject\obj\Debug\net6.0\firstproject.csproj.CoreCompileInputs.cache
+C:\Users\isabe\OneDrive\Área de Trabalho\Git\MyProjectsTest\firstproject\obj\Debug\net6.0\firstproject.dll
+C:\Users\isabe\OneDrive\Área de Trabalho\Git\MyProjectsTest\firstproject\obj\Debug\net6.0\refint\firstproject.dll
+C:\Users\isabe\OneDrive\Área de Trabalho\Git\MyProjectsTest\firstproject\obj\Debug\net6.0\firstproject.pdb
+C:\Users\isabe\OneDrive\Área de Trabalho\Git\MyProjectsTest\firstproject\obj\Debug\net6.0\firstproject.genruntimeconfig.cache
+C:\Users\isabe\OneDrive\Área de Trabalho\Git\MyProjectsTest\firstproject\obj\Debug\net6.0\ref\firstproject.dll

@@ -1,0 +1,53 @@
+  After you was created repository and upload the project got to
+select your repository and click in (Settings) and in left
+sidebar and click in (Environment) now click in (New environment)
+report the name and click in (Configure environment) now you can
+report who can review the pull requests and what time during the
+build and (Environment secrets) you can use to report some screte
+from AWS or Azure and so non.
+
+  Now click in (Actions) now you can click in (Set up a workflow
+yourself) and type the code .yml/.yaml that to make the git flow
+now click in (Actions) find and click in the flow name in this
+case is (FirstFlow) and click in (Run workflow -> Run workflow)
+
+name: FirstFlow # Flow name
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo Hello world!
+
+  deploy-develop:
+    runs-on: ubuntu-latest
+    environment:
+      name: develop
+      url: "urltest.com"
+    needs: build
+    steps:
+      - name: Run a one-line script
+        run: echo Deploy dev!
+
+  deploy-homologacao:
+    runs-on: ubuntu-latest
+    environment:
+      name: homologacao
+      url: "urltest.com"
+    needs: deploy-develop #This mean the homolog depend of the buid develop success to build homolog 
+    steps:
+      - name: Run a one-line script
+        run: echo Deploy homolog!
+
+  deploy-main:
+    runs-on: ubuntu-latest
+    environment:
+      name: Main
+      url: "urltest.com"
+    needs: deploy-homologacao #This mean the homolog depend of the buid develop success to build homolog 
+    steps:
+      - name: Run a one-line script
+        run: echo Deploy homolog!
