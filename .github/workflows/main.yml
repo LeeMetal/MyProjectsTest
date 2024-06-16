@@ -1,20 +1,11 @@
-name: FirstFlow
-on:
-  pull_request:
-    types: [labeled]
+name: FirstFlow # Flow name
+# the line below allow workflow only run manually
+on:#Triggers
+  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Run a one-line script
         run: echo Hello world!
-
-  deploy-main:
-    runs-on: ubuntu-latest
-    environment:
-      name: Main
-      url: "urltest.com"
-    steps:
-      - name: Run a one-line script
-        run: echo Deploy homolog!
