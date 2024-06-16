@@ -10,11 +10,11 @@ jobs:
       - name: Run a one-line script
         run: echo Hello world!
 
-deploy-main:
-  runs-on: ubuntu-latest
-  environment:
-    name: Main
-    url: "urltest.com"
-  steps:
-    - name: Run a one-line script
-      run: echo Deploy homolog!
+  deploy-main:
+    runs-on: ubuntu-latest
+    environment:
+      name: Main
+      url: "urltest.com"
+    steps:
+      - name: Run a one-line script
+        run: echo Deploy homolog!
