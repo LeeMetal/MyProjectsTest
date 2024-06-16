@@ -73,3 +73,20 @@ jobs:
     #  with:
     #    name: MSIX Package
     #    path: ${{ env.Wap_Project_Directory }}\AppPackages
+  
+  deploy-dev:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Setup MSBuild.exe
+      uses: microsoft/setup-msbuild@v2
