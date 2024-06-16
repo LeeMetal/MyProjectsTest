@@ -75,6 +75,7 @@ jobs:
     #    path: ${{ env.Wap_Project_Directory }}\AppPackages
   
   deploy-dev:
+    needs: build
     runs-on: windows-latest
 
     steps:
