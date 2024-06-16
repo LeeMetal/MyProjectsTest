@@ -1,7 +1,7 @@
 name: FirstFlow # Flow name
 on:
   pull_request: #allow build after a push
-    types:[labeled]
+    types: [labeled]
 
 jobs:
   build:
