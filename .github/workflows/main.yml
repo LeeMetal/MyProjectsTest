@@ -10,7 +10,7 @@ on: #triggers
 
 jobs:
   build:
-    runs-on: ubuntu latest
+    runs-on: self-hosted
     steps:
       #Checks-out your repository under $GUITHUB_WORKSPACE, so your job can access it
       #- uses: actions/checkout@v3
