@@ -15,7 +15,6 @@ deploy-main:
   environment:
     name: Main
     url: "urltest.com"
-  needs: deploy-homologacao #This mean the homolog depend of the buid develop success to build homolog 
   steps:
     - name: Run a one-line script
       run: echo Deploy homolog!
