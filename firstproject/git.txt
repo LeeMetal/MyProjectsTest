@@ -15,7 +15,7 @@ https://www.youtube.com/playlist?list=PLMFPOLE2cW1yu-FfYiGElIrDqQfKmZGLM
 
 name: FirstFlow # Flow name
 # the line below allow workflow only run manually
-on:
+on:#Triggers
   workflow_dispatch:
 
 jobs:
@@ -97,3 +97,32 @@ jobs:
     steps:
       - name: Run a one-line script
         run: echo Deploy homolog!
+
+---------------------------------------------------------------------------------------------------------
+Create one Action in (Actions > Suggested for this respository > Configure)
+name: #name your flow
+
+on: #triggers
+  push: #This line means every time you push some change this pepiline will executed
+    branches: ["main"] #report here what branchs that you want see the changes 
+  pull_request: #It means every time you create a pullrequest to main this pipeline wll executed
+    branches: ["main"]
+  
+  workflow_dispatch: #this allow dispatch button when you want clicking this button
+
+jobs:
+  build:
+    runs-on: ubuntu latest
+    steps:
+      #Checks-out your repository under $GUITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      #Run only one code line
+      - name: Run a one-line script
+        run: echo Hello world
+      - name: Run a multi-line script
+        run:
+          echo Hello world 1!
+          echo Hello world 2!
+
+If you want to use some existing configuration select at the right side in the (Marketplace) tab search by the
+tecnology that you want, clicked in it and copy below the code above as an exemple

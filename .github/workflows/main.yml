@@ -1,40 +1,23 @@
-name: FirstFlow
-on:
-  workflow_dispatch:
+name: FirstFlow #name your flow
+
+on: #triggers
+  push: #This line means every time you push some change this pepiline will executed
+    branches: ["main"] #report here what branchs that you want see the changes 
+  pull_request: #It means every time you create a pullrequest to main this pipeline wll executed
+    branches: ["main"]
+  
+  workflow_dispatch: #this allow dispatch button when you want clicking this button
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu latest
     steps:
+      #Checks-out your repository under $GUITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      #Run only one code line
       - name: Run a one-line script
-        run: echo Hello world!
-
-  deploy-develop:
-    runs-on: ubuntu-latest
-    environment:
-      name: develop
-      url: "urltest.com"
-    needs: build
-    steps:
-      - name: Run a one-line script
-        run: echo Deploy dev!
-
-  deploy-homologacao:
-    runs-on: ubuntu-latest
-    environment:
-      name: homologacao
-      url: "urltest.com"
-    needs: deploy-develop #This mean the homolog depend of the buid develop success to build homolog 
-    steps:
-      - name: Run a one-line script
-        run: echo Deploy homolog!
-
-  deploy-main:
-    runs-on: ubuntu-latest
-    environment:
-      name: Main
-      url: "urltest.com"
-    needs: deploy-homologacao #This mean the homolog depend of the buid develop success to build homolog 
-    steps:
-      - name: Run a one-line script
-        run: echo Deploy homolog!
+        run: echo Hello world
+      - name: Run a multi-line script
+        run:
+          echo Hello world 1!
+          echo Hello world 2!

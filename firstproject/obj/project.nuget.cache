@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "qyQvm2ai0ES+Q36YMKZ9cWv/aIS4MofFnYxbQ2ma0YytbImEjifa8H/7a+1eZAnThn9XkQHL+aMs8OQaD0Dpdw==",
+  "dgSpecHash": "YNpKe8qRptc=",
   "success": true,
   "projectFilePath": "C:\\Users\\isabe\\OneDrive\\Área de Trabalho\\Git\\MyProjectsTest\\firstproject\\firstproject.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\isabe\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.30\\microsoft.netcore.app.ref.6.0.30.nupkg.sha512",
+    "C:\\Users\\isabe\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.30\\microsoft.windowsdesktop.app.ref.6.0.30.nupkg.sha512",
+    "C:\\Users\\isabe\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.30\\microsoft.aspnetcore.app.ref.6.0.30.nupkg.sha512",
+    "C:\\Users\\isabe\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.30\\microsoft.netcore.app.host.win-x64.6.0.30.nupkg.sha512"
+  ],
   "logs": []
 }
